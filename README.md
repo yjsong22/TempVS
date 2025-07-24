@@ -88,25 +88,25 @@ Example usage:
 
 Data sources: `flintstones`, `pororo`, `vist`,  `vwp`,
 
-### 1. **Event Relation Inference (MT1)**: `paired_event_discrimination` (two-event relation), `triple_event_discrimination` (three-event relation), 
+1. **Event Relation Inference (MT1)**: `paired_event_discrimination` (two-event relation), `triple_event_discrimination` (three-event relation), 
 ```bash
 python run_inference.py --data_source flintstones --task paired_event_discrimination --model_id OpenGVLab/InternVL2_5-78B-MPO
 python run_inference.py --data_source flintstones --task triple_event_discrimination --model_id OpenGVLab/InternVL2_5-78B-MPO
 ```
 
-### 2. **Sentence Ordering (MT2)**: `ordering_texts_opt_event` (event),  `ordering_texts_opt_story` (story), 
+2. **Sentence Ordering (MT2)**: `ordering_texts_opt_event` (event),  `ordering_texts_opt_story` (story), 
 ```bash
 python run_inference.py --data_source pororo --task ordering_texts_opt_event --model_id microsoft/Phi-3.5-vision-instruct
 python run_inference.py --data_source pororo --task ordering_texts_opt_story --model_id microsoft/Phi-3.5-vision-instruct
 ```
 
-### 3. **Image Ordering (MT3)**: `ordering_images_opt_event` (event),  `ordering_images_opt_story` (story), 
+3. **Image Ordering (MT3)**: `ordering_images_opt_event` (event),  `ordering_images_opt_story` (story), 
 ```bash
 python run_inference.py --data_source vist --task ordering_images_opt_event --model_id llava-hf/llava-interleave-qwen-7b-hf
 python run_inference.py --data_source vist --task ordering_images_opt_story --model_id llava-hf/llava-interleave-qwen-7b-hf
 ```
 
-### 4. **Grounding Test (GT)**: `paired_grounding_one_text` (MT1 two-event grounding), `triple_grounding_one_text` (MT1 three-event grounding), `single_grounding_all` (MT2 & MT3 event grounding), `single_grounding_all_story` (MT2 & MT3 story grounding)
+4. **Grounding Test (GT)**: `paired_grounding_one_text` (MT1 two-event grounding), `triple_grounding_one_text` (MT1 three-event grounding), `single_grounding_all` (MT2 & MT3 event grounding), `single_grounding_all_story` (MT2 & MT3 story grounding)
 
 ```bash
 python run_inference.py --data_source vwp --task paired_grounding_one_text --model_id TIGER-Lab/Mantis-8B-Idefics2
