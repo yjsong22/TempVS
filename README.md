@@ -4,7 +4,6 @@ This repository contains the dataset, evaluation code and analysis scripts for o
 
 **Burn *After* Reading: Do Multimodal Large Language Models Truly Capture Order of Events in Image Sequences?**  
 Yingjin Song, Yupei Du, Denis Paperno, Albert Gatt  
-Utrecht University, The Netherlands  
 [Paper](https://aclanthology.org/2025.findings-acl.1248/) | [Dataset & Code](https://github.com/yjsong22/TempVS)
 
 ---
