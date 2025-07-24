@@ -10,7 +10,7 @@ Yingjin Song, Yupei Du, Denis Paperno, Albert Gatt
 
 ## 📌 Overview
 
-**TempVS** is a new benchmark designed to test **temporal grounding and reasoning** capabilities in Multimodal Large Language Models (MLLMs). Unlike prior datasets, TempVS evaluates models on **multi-event** understanding using **image sequences** and **textual prompts** across three core tasks:
+**TempVS** is a benchmark designed to test **temporal grounding and reasoning** capabilities in Multimodal Large Language Models (MLLMs). Unlike prior datasets, TempVS evaluates models on **multi-event** understanding using **image sequences** and **textual prompts** across three main tasks:
 
 - **MT1: Event Relation Inference** (two-event, three-event)
 - **MT2: Sentence Ordering**  
@@ -36,15 +36,15 @@ pip install -r requirements.txt
 
 ---
 
-## 🖼️ TempVS Data
+## 🖼️ TempVS Benchmark
 
-Our dataset will be released on HuggingFace.
+Our benchmark data is available at [HuggingFace](https://huggingface.co/datasets/yingjins/TempVS).
 
 Alternatively, you can download from original datasets (FlintstonesSV, PororoSV, VIST, VWP) and process them follosing the steps below:
 
 ### Download images and annotations
 
-### Select the examples
+### Process the original datasets
 
 ---
 
@@ -68,7 +68,13 @@ python scripts/eval_mt3.py --model qwen2-vl-72b --input data/vist/mt3_events.jso
 ### 4. **Grounding Test (GT)**  
 ```bash
 python scripts/eval_grounding.py --model llava-onevision-7b --input data/pororo/grounding.json
+
 ```
+
+### Models tested:
+- InternVL
+- QwenVL:
+
 
 ## 📊 Performance Evaluation
 
@@ -78,7 +84,7 @@ python scripts/eval_grounding.py --model llava-onevision-7b --input data/pororo/
 ## 📜 Citation
 
 ```bibtex
-@inproceedings{song-etal-2025-burn,
+@inproceedings{song-etal-2025-tempvs,
   title = {Burn After Reading: Do Multimodal Large Language Models Truly Capture Order of Events in Image Sequences?},
   author = {Song, Yingjin and Du, Yupei and Paperno, Denis and Gatt, Albert},
   booktitle = {Findings of the Association for Computational Linguistics: ACL 2025},
