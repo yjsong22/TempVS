@@ -1,6 +1,6 @@
-# TempVS: **Temp**oral Grounding & Understanding Benchmark in **V**isual **S**tories
+# TempVS: <u>Temp</u>oral Grounding & Understanding Benchmark in <u>V</u>isual <u>S</u>tories
 
-This repository contains the dataset, evaluation code, and analysis scripts for our ACL 2025 Findings paper:
+This repository contains the dataset, evaluation code and analysis scripts for our ACL 2025 Findings paper:
 
 **Burn *After* Reading: Do Multimodal Large Language Models Truly Capture Order of Events in Image Sequences?**  
 Yingjin Song, Yupei Du, Denis Paperno, Albert Gatt  
