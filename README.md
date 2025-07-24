@@ -19,26 +19,6 @@ Utrecht University, The Netherlands
 
 Each task is paired with a **Grounding Test (GT)** to assess whether errors are due to lack of visual grounding or temporal reasoning.
 
-
----
-
-## 📁 Repository Structure
-
-```
-.
-├── data/                         # Preprocessed data and image sequences
-│   ├── flintstones/             # Subset from FlintstonesSV
-│   ├── pororo/                  # Subset from PororoSV
-│   ├── vist/                    # Subset from VIST
-│   └── vwp/                     # Subset from VWP
-├── prompts/                     # Task prompts and format variations
-├── scripts/                     # Data processing and evaluation scripts
-├── models/                      # Sample model inference scripts
-├── results/                     # Zero-shot evaluation results for 38 MLLMs
-├── requirements.txt
-└── README.md
-```
-
 ---
 
 ## 📦 Installation
