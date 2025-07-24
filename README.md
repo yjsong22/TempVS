@@ -53,26 +53,26 @@ Once downloaded, make sure the files are structured as follows:
 ├── data/
 │   └── benchmark/                # Annotation files (multiple-choice questions and answers)
 │   └── flintstones/              # Image subset from FlintstonesSV
-│       └── combined
-│       └── combined_shuffled
-│       └── video_frames_sampled_jpg
+│       └── combined/
+│       └── combined_shuffled/
+│       └── video_frames_sampled_jpg/
 │   └── pororo/                   # Image subset from PororoSV
-│       └── combined
-│       └── combined_shuffled
-│       └── original_color
+│       └── combined/
+│       └── combined_shuffled/
+│       └── original_color/
 │   └── vist/                     # Image subset from VIST
-│       └── combined
-│       └── combined_shuffled
-│       └── images
+│       └── combined/
+│       └── combined_shuffled/
+│       └── images/
 │   └── vwp/                      # Image subset from VWP
-│       └── alpha4a
-│       └── beta0
-│       └── beta1
-│       └── beta2a
-│       └── beta2b
-│       └── beta2c
-│       └── combined
-│       └── combined_shuffled
+│       └── alpha4a/
+│       └── beta0/
+│       └── beta1/
+│       └── beta2a/
+│       └── beta2b/
+│       └── beta2c/
+│       └── combined/
+│       └── combined_shuffled/
 ```
 
 Each image subset directory (e.g., `data/flintstones/`) should contain the sampled images used in the benchmark. The annotation files should be placed directly under `data/benchmark/`.

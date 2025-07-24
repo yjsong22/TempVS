@@ -357,9 +357,6 @@ def check_triple_similarity(df, sim_thres=0.0):
         if len(jpg_paths) == 0 or len(texts) == 0:
             continue
         
-        # jpg_paths = [path.replace('/process_data', '') for path in jpg_paths]
-        # if 'pororo' in jpg_paths[0] or 'flintstones' in jpg_paths[0]:
-        #     jpg_paths = [path.replace('/scratch/song0018/temporal_data/', '/home/ysong/temporal-mllms/data/temporal_data/') for path in jpg_paths]
         
         try:
             for path in jpg_paths:
