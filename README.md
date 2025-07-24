@@ -10,7 +10,7 @@ Yingjin Song, Yupei Du, Denis Paperno, Albert Gatt
 
 ## 📌 Overview
 
-**TempVS** is a benchmark designed to test **temporal grounding and reasoning** capabilities in Multimodal Large Language Models (MLLMs). Unlike prior datasets, TempVS evaluates models on **multi-event** understanding using **image sequences** and **textual prompts** across three main tasks:
+**TempVS** is a benchmark designed to test **temporal grounding and reasoning** capabilities in Multimodal Large Language Models (MLLMs). TempVS evaluates models on **multi-event** understanding using **image sequences** and **textual prompts** across three main tasks:
 
 - **MT1: Event Relation Inference** (two-event, three-event)
 - **MT2: Sentence Ordering**  
@@ -40,11 +40,28 @@ pip install -r requirements.txt
 
 Our benchmark data is available at [HuggingFace](https://huggingface.co/datasets/yingjins/TempVS).
 
-Alternatively, you can download from original datasets (FlintstonesSV, PororoSV, VIST, VWP) and process them follosing the steps below:
+### Step 1: Download the Data
 
-### Download images and annotations
+Download the dataset files (annotations and image subsets) from our [HuggingFace repository](https://huggingface.co/datasets/yingjins/TempVS). You can do this manually or using the `huggingface_hub` Python API.
 
-### Process the original datasets
+
+### Step 2: Organize the Data
+
+Once downloaded, make sure the files are structured as follows:
+
+```
+├── data/
+│   └── benchmark/                # Annotation files (multiple-choice questions and answers)
+│   └── flintstones/              # Image subset from FlintstonesSV
+│   └── pororo/                   # Image subset from PororoSV
+│   └── vist/                     # Image subset from VIST
+│   └── vwp/                      # Image subset from VWP
+```
+
+Each image subset directory (e.g., `data/flintstones/`) should contain the sampled images used in the benchmark. The annotation files should be placed directly under `data/benchmark/`.
+
+
+Alternatively, you can download from original datasets FlintstonesSV, PororoSV, VIST, VWP, and process them by running process_data/generate_prompts.py
 
 ---
 
