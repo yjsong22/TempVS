@@ -1,4 +1,4 @@
-# TempVS: <u>Temp</u>oral Grounding & Understanding Benchmark in <u>V</u>isual <u>S</u>tories
+# TempVS: Temporal Grounding & Understanding Benchmark in Visual Stories
 
 This repository contains the dataset, evaluation code and analysis scripts for our ACL 2025 Findings paper:
 
