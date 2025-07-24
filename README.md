@@ -29,7 +29,7 @@ Set up a Python environment with:
 ```bash
 git clone https://github.com/yjsong22/TempVS.git
 cd TempVS
-conda create -n tempvs python=3.11
+conda create -n tempvs python=3.12
 conda activate tempvs
 pip install -r requirements.txt
 ```
