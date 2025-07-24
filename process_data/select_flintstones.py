@@ -94,7 +94,6 @@ def main():
         filtered_flintstones = pd.read_csv(args.filtered_data_fn)  
         print(filtered_flintstones.shape)
         combine_images(filtered_flintstones, 'flintstones', args.data_dir)  
-    sys.exit(0)
 
     
     print("Extract events ...")
@@ -109,7 +108,6 @@ def main():
     print("Create questions ...")
     df_with_questions = create_questions(df_with_events)
     df_with_questions.to_pickle(os.path.join(args.data_dir, args.output_fn.replace('events', 'questions')))
-    print(f"Filtered flintstones data saved to: {output_path}")
     
     
 if __name__ == "__main__":

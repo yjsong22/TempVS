@@ -53,15 +53,32 @@ Once downloaded, make sure the files are structured as follows:
 ├── data/
 │   └── benchmark/                # Annotation files (multiple-choice questions and answers)
 │   └── flintstones/              # Image subset from FlintstonesSV
+│       └── combined
+│       └── combined_shuffled
+│       └── video_frames_sampled_jpg
 │   └── pororo/                   # Image subset from PororoSV
+│       └── combined
+│       └── combined_shuffled
+│       └── original_color
 │   └── vist/                     # Image subset from VIST
+│       └── combined
+│       └── combined_shuffled
+│       └── images
 │   └── vwp/                      # Image subset from VWP
+│       └── alpha4a
+│       └── beta0
+│       └── beta1
+│       └── beta2a
+│       └── beta2b
+│       └── beta2c
+│       └── combined
+│       └── combined_shuffled
 ```
 
 Each image subset directory (e.g., `data/flintstones/`) should contain the sampled images used in the benchmark. The annotation files should be placed directly under `data/benchmark/`.
 
 
-Alternatively, you can download from original datasets FlintstonesSV, PororoSV, VIST, VWP, and process them by running process_data/generate_prompts.py
+Alternatively, you can download from original datasets [FlintstonesSV](https://aclanthology.org/2021.emnlp-main.543/), [PororoSV](https://openaccess.thecvf.com/content_CVPR_2019/papers/Li_StoryGAN_A_Sequential_Conditional_GAN_for_Story_Visualization_CVPR_2019_paper.pdf), [VIST](https://visionandlanguage.net/VIST/dataset.html) and [VWP](https://huggingface.co/datasets/tonyhong/vwp), and process them by running `process_data/generate_prompts.py`.
 
 ---
 

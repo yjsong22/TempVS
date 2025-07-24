@@ -133,6 +133,10 @@ def main():
     output_path = os.path.join(args.data_dir, args.output_fn)
     df_with_events.to_pickle(output_path)
     print(f"Filtered vist data with events saved to: {output_path}")
+
+    print("Create questions ...")
+    df_with_questions = create_questions(df_with_events)
+    df_with_questions.to_pickle(os.path.join(args.data_dir, args.output_fn.replace('events', 'questions')))
     
 
     
