@@ -1,0 +1,53 @@
+{
+    "paired_event_discrimination": [
+        "No need to give reasoning process. Submit only the right option letter as your answer, e.g., Option [Letter].",
+        "Do not tell the reasons of your decision. Provide the most suitable choice letter in the format of 'Option [Letter]' as your response only.",
+        "Do not repeat the prompt or include reasons. Only return the correct option letter in the form of 'Option [Letter]' as your response.",
+        "Please exclude explanations in the response. Offer the most proper choice letter in the format of 'Option [Letter]' as your answer only."
+    ],
+
+    "reversed_paired_event_discrimination": [
+        "No need to give reasoning process. Submit only the right option letter as your answer, e.g., Option [Letter].",
+        "Do not tell the reasons of your decision. Provide the most suitable choice letter in the format of 'Option [Letter]' as your response only.",
+        "Do not repeat the prompt or include reasons. Only return the correct option letter in the form of 'Option [Letter]' as your response.",
+        "Please exclude explanations in the response. Offer the most proper choice letter in the format of 'Option [Letter]' as your answer only."
+    ],
+
+    "single_grounding": [
+        "Submit the right number of the image in the sequence as your answer only without additional reasoning or repetition of the instructions.",
+        "Provide  only the most suitable image number as your response, avoiding any explanations or repetition.",
+        "Only return the correct image number in the provided sequence without additional reasoning details or repetition of the instructions."
+    ],
+
+    "ordering_images_opg": [
+        "Avoid any explanations or repetition of instructions, and only return your answer as a list of image IDs in the correct order, e.g., 'Image x -> Image y -> Image z'.",
+        "Only provide your answer as a list of image IDs corresponding to the correct order, e.g., 'Image w -> Image x -> Image z -> Image y'.  Do not respond with any additional details or repetition of the instructions.",
+        "No any justifications or repetition of the prompt. Only return the correct order of image IDs as your response in this format 'Image h -> Image g -> Image e -> Image f ->Image i'."
+    ],
+    "ordering_texts_opg":[
+        "Do not provide explanations or restate the question. Provide your output only as a single line in the following format: [1. Sentence u] [2. Sentence v] [3. Sentence y] [4. Sentence x] [5. Sentence w].",
+        "Return the ordered sentences as a numbered list only as in this format: [1. Sentence h] [2. Sentence k] [3. Sentence i] [4. Sentence j]. No any justifications or repetition of the prompt.",
+        "Avoid any explanations or repetition of instructions, and only return your answer in the correct order as a list like: [1. Sentence g] [2. Sentence f] [3. Sentence i] [4. Sentence j] [5. Sentence h]."
+    ],
+    "ordering_images_opt": [
+        "Select from the following options and your answer should be in the format: 'Option [Letter]'. Respond with the correct option only, avoiding any explanations or repetition.",
+        "Do not provide explanations or restate the question. Provide your answer from the following choices only in the format: Option [Letter].",
+        "Choose the correct option from the choices provided below and submit your answer only as 'Option [Letter]', without any justifications or repetition of the prompt."
+    ],
+    "ordering_texts_opt":[
+        "Do not provide explanations or repeat the prompt. Select from the following options and your answer should only be in the format: Option [Letter].",
+        "Provide your answer from the following choices only in the format: 'Option [Letter]' without explanations or repeating the instructions.",
+        "Choose the correct option from the choices provided below and output your answer only as 'Option [Letter]', avoiding any explanations or repetition."
+    ],
+    "reversed_ordering_texts_opt":[
+        "Do not provide explanations or repeat the prompt. Select from the following options and your answer should only be in the format: Option [Letter].",
+        "Provide your answer from the following choices only in the format: 'Option [Letter]' without explanations or repeating the instructions.",
+        "Choose the correct option from the choices provided below and output your answer only as 'Option [Letter]', avoiding any explanations or repetition."
+    ],
+    "reversed_ordering_texts_opg":[
+        "Do not provide explanations or restate the question. Provide your output only as a single line in the following format: [1. Sentence u] [2. Sentence v] [3. Sentence y] [4. Sentence x] [5. Sentence w].",
+        "Return the ordered sentences as a numbered list only as in this format: [1. Sentence h] [2. Sentence k] [3. Sentence i] [4. Sentence j]. No any justifications or repetition of the prompt.",
+        "Avoid any explanations or repetition of instructions, and only return your answer in the correct order as a list like: [1. Sentence g] [2. Sentence f] [3. Sentence i] [4. Sentence j] [5. Sentence h]."
+    ]
+    
+}

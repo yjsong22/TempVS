@@ -1,0 +1,78 @@
+{  "paired_event_discrimination": [
+        "Is the statement completely accurate and consistent with the content in the sequence of images?",
+        "Analyze the provided image sequence to determine whether the following statement is True or False.",
+        "Review the sequential images and decide whether the provided statement is True or False.",
+        "Is the statement entirely consistent and supported by the images in the sequence?",
+        "Examine the visual evidence in the provided sequence of images to determine whether the statement is True or False.",
+        "Does the statement fully match the information presented in the ordered images? Taking the content in the image seqeunce into account, can you decide whether the statement is True or False?",
+        "Given the multiple images provided in order, can you select the correct answer from True or False considering statement?"
+    ],
+    "reversed_paired_event_discrimination": [
+        "Is the statement completely accurate and consistent with the content in the sequence of right-to-left images?",
+        "Analyze the provided image sequence to determine whether the following statement is True or False.",
+        "Review the sequential images from right to left and decide whether the provided statement is True or False.",
+        "Is the statement entirely consistent and supported by the images in the sequence from right to left?",
+        "Examine the visual evidence in the provided right-to-left sequence of images to determine whether the statement is True or False.",
+        "Does the statement fully match the information presented in the ordered right-to-left images? ",
+        "Given the multiple images provided in order from right to left, can you select the correct answer from True or False considering statement?"
+    ],
+    "paired_event_discrimination_unsure": [
+        "Is the statement completely accurate and consistent with the content in the sequence of images?",
+        "Analyze the provided image sequence to determine whether the following statement is True, False, or Unsure.",
+        "Review the sequential images and decide whether the provided statement is True, False, or Unsure.",
+        "Is the statement entirely consistent and supported by the images in the sequence?",
+        "Examine the visual evidence in the provided sequence of images to determine whether the statement is True, False, or Unsure.",
+        "Does the statement fully match the information presented in the ordered images? Taking the content in the image seqeunce into account, can you decide whether the statement is True, False, or Unsure?",
+        "Given the multiple images provided in order, can you select the correct answer from True, False or Unsure considering statement?"
+    ],
+    "paired_grounding_one_text": [
+        "Based on the event described, select the image from the provided ones that best matches it.",
+        "Pick the image that accurately represents the event.",
+        "Which is the most fitting image for the described event? Pick from the following options.",
+        "If you were to illustrate the event, which image would you use?",
+        "Find the image that represents the event most precisely.",
+        "Match the event described to the most appropriate image from the choices provided."
+    ],
+
+    "paired_grounding_one_image": [
+        "Based on the image provided, select the event from the provided ones that best matches it.",
+        "Analyze the image and determine which of these listed events it best represents.",
+        "Which event is most accurately depicted in the image? Pick from the following options.",
+        "Consider the image and choose the one event that most appropriately matches it from the options below.",
+        "If you were to describe the image, which event would you use?",
+        "From the options given, select the event that corresponds most accurately to the image."
+    ],
+    "single_grounding": [
+        "Based on the event described, select the image that best matches it from the following options.",
+        "Pick the image from the image sequence that accurately represents the event.",
+        "Which is the most fitting image for the described event? Pick from the choices below.",
+        "If you were to illustrate the event, which picture would you use?",
+        "Find the image from the sequence of images that represents the event most precisely.",
+        "Identify the picture that best represents the given event."
+    ],
+    "ordering_images": [
+        "Rearrange the following images in the correct order based on content in the story.",
+        "The provided paragraph describes a sequence of events. Arrange the images in the correct chronological order to match the story.",
+        "The images are out of order compared to the text. Identify and reorder them to match the described sequence.",
+        "The text narrates a story or event sequence. Use your vision-language reasoning to reorder the images to reflect the narrative structure.",
+        "Using your understanding of the text and image content, arrange the images in the correct sequence to match the flow of events in the text.",
+        "The paragraph describes events in a specific timeline. Use multimodal reasoning to reorder the images in the correct sequence."
+    ],
+    "ordering_texts":[
+        "You are given an ordered image sequence and several sentences in a random order. Your task is to analyze the content of the sequence of images from left to right and rearrange the sentences into the correct chronological or logical order.",
+        "Here is an left-to-right image seqeunce and some sentences in random order. Your goal is to determine the correct order of the sentences based on the context, events, or details observable in the images. Consider the visual elements in the sequential images to infer the logical or temporal sequence.",
+        "The images are presented in a correct order, but the sentences are not. Your task is to reorder the sentences to match the sequence of events or details in the images from left to right.",
+        "You are provided with a sequence of images and several randomly ordered sentences. Your task is to: 1. Understand the context of the image sequence; 2. Identify how each sentence relates to the image; 3. Rearrange the sentences to form a coherent order.",
+        "Using your multimodal understanding and reasoning of the ordered image sequence and the randomly shuffled sentences , arrange the sentences in the correct sequence to match the flow of events in the image seqeunce.",
+        "Presented is an image sequence in the order from left to right along with several unordered sentences. Your task is to determine the correct sequence of the sentences by analyzing the context, events, or details depicted in the images. Use the visual elements in the images to deduce the logical or chronological order."
+    ],
+    "reversed_ordering_texts":[
+        "You are given a right-to-left ordered image sequence and several sentences in a random order. Your task is to analyze the content of the sequence of images from right to left and rearrange the sentences into the correct chronological or logical order.",
+        "Here is a right-to-left image seqeunce and some sentences in random order. Your goal is to determine the correct order of the sentences based on the context, events, or details observable in the images. Consider the visual elements in the sequential images from right to left to infer the logical or temporal sequence.",
+        "The images are presented in a correct order from right to left, but the sentences are not. Your task is to reorder the sentences to match the sequence of events or details in the images from right to left.",
+        "You are provided with a right-to-left sequence of images and several randomly ordered sentences. Your task is to: 1. Understand the context of the image sequence; 2. Identify how each sentence relates to the image; 3. Rearrange the sentences to form a coherent order.",
+        "Using your multimodal understanding and reasoning of the ordered right-to-left image sequence and the randomly shuffled sentences , arrange the sentences in the correct sequence to match the flow of events in the image seqeunce from right to left.",
+        "Presented is an image sequence in the order from right to left along with several unordered sentences. Your task is to determine the correct sequence of the sentences by analyzing the context, events, or details depicted in the images. Use the visual elements in the images to deduce the logical or chronological order."
+    ]
+
+}

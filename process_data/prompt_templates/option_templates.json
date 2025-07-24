@@ -1,0 +1,76 @@
+{  "paired_event_discrimination": [
+    "A. True; B. False.",
+    "A. True; B. False.",
+    "A. False; B. True.",
+    "A. False; B. True."
+],
+    "paired_event_discrimination_unsure": [
+        "A. True; B. False; C. Unsure.",
+        "A. True; B. Unsure; C. False.",
+        "A. False; B. Unsure; C. True.",
+        "A. False; B. True; C. Unsure.",
+        "A. Unsure; B. True; C. False.",
+        "A. Unsure; B. False; C. True."
+    ],
+
+    "triple_event_discrimination": [
+    "A. True; B. False.",
+    "A. True; B. False.",
+    "A. False; B. True.",
+    "A. False; B. True."
+],
+
+
+
+    "paired_grounding_one_text": [
+        "A. First image; B. Second image.",
+        "A. First image; B. Second image.",
+        "A. Second image; B. First image.",
+        "A. Second image; B. First image."
+    ],
+
+    "triple_grounding_one_text": [
+        "A. First image; B. Second image; C. Third image.",
+        "A. Third image; B. Second image; C. First image.",
+        "A. Second image; B. First image; C. Third image.",
+        "A. First image; B. Third image; C. Second image.",
+        "A. First image; B. Second image; C. Third image.",
+        "A. First image; B. Second image; C. Third image."
+    ],
+
+    "paired_grounding_one_text_unsure": [
+        "A. First image; B. Second image; C. Both images; D. Neither image",
+        "A. First image; B. Second image; C. Neither image; D. Both images.",
+        "A. Second image; B. Both images; C. First image; D. Neither image.",
+        "A. First image; B. Both images; C. Neither image; D. Second image.",
+        "A. Second image; B. Both images; C. Neither image; D. First image.",
+        "A. Both images; B. First image; C. Second image; D. Neither image.",
+        "A. Both images; B. First image; C. Neither image; D. Second image.",
+        "A. Second image; B. First image; C. Neither image; D. Both images."
+    ],
+    "paired_grounding_one_image": [
+        "A. First event; B. Second event.",
+        "A. First event; B. Second event.",
+        "A. Second event; B. First event.",
+        "A. Second event; B. First event."
+    ],
+    "triple_grounding_one_image": [
+        "A. First event; B. Third event; C. Second event.",
+        "A. Third event; B. Second event; C. First event.",
+        "A. Second event; B. First event; C. Third event.",
+        "A. First event; B. Second event; C. Third event.",
+        "A. First event; B. Second event; C. Third event.",
+        "A. Second event; B. First event; C. Third event."
+    ],
+
+    "paired_grounding_one_image_unsure": [
+        "A. First event; B. Second event; C. Both events; D. Neither event.",
+        "A. First event; B. Second event; C. Neither event; D. Both events.",
+        "A. Second event; B. Both events; C. First event; D. Neither event.",
+        "A. Both events; B. First event; C. Neither event; D. Second event.",
+        "A. Both events; B. Second event; C. Neither event; D. First event.",
+        "A. Both events; B. Neither event; C. Second event; D. First event.",
+        "A. Neither event; B. First event; C. Second event; D. Both events.",
+        "A. Second event; B. Neither event; C. First event; D. Both events."
+    ]
+}

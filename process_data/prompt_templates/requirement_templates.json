@@ -1,0 +1,58 @@
+{
+    "paired_event_discrimination": [
+        "When making the choice, focus on the evidence presented in the sequence of images from left to right.",
+        "Choose the correct option based on the content in the sequential images from left to right.",
+        "Only use the left-to-right content of the image sequence to inform the decision.",
+        "Evaluate the statement strictly based on the information shown in the sequence of images from left to right."
+    ],
+    "reversed_paired_event_discrimination": [
+        "When making the choice, focus on the evidence presented in the sequence of images from right to left.",
+        "Choose the correct option based on the content in the sequential images from right to left.",
+        "Only use the right-to-left content of the image sequence to inform the decision.",
+        "Evaluate the statement strictly based on the information shown in the sequence of images from right to left."
+    ],
+    "paired_grounding_one_text": [
+        "When making the choice, focus on the evidence presented in the two images.",
+        "Choose the correct option based on the content in the two images.",
+        "Carefully compare two images to inform the decision.",
+        "Evaluate the statement strictly based on the information shown in the two images."
+    ],
+    "triple_grounding_one_text": [
+        "When making the choice, focus on the evidence presented in the three images.",
+        "Choose the correct option based on the content in the three images.",
+        "Carefully compare the three images to inform the decision.",
+        "Evaluate the statement strictly based on the information shown in the three images."
+    ],
+    "paired_grounding_one_image": [
+        "When making the choice, focus on the evidence presented in the image.",
+        "Choose the correct event based on the content in the shown image.",
+        "Carefully compare two statements with the provided image to inform the decision.",
+        "Evaluate the two statements strictly based on the information shown in the given image."
+    ],
+    "triple_grounding_one_image": [
+        "When making the choice, focus on the evidence presented in the image.",
+        "Choose the correct event based on the content in the shown image.",
+        "Carefully compare three statements with the provided image to inform the decision.",
+        "Evaluate the three statements strictly based on the information shown in the given image."
+    ],
+    
+    "ordering_images": [
+        "Carefully read the provided text. Focus on the events, actions, and details described to reorder the images logically.",
+        "Focus on matching the actions and events shown in the images with the details described in the text.",
+        "Identify key events and details from the text and use them to determine the proper order of the images.",
+        "Compare the images with the text description, focusing on the sequence of events to arrange unordered images correctly."
+                    
+    
+    ],
+   
+    "ordering_texts":[
+        "Read the image sequence from left to right. Use the images' content to guide your sentence ordering. Avoid assumptions not supported by the image seqeunce or sentences.",
+        "Understand images from left to right in the order. Focus on the visual content of the images to determine the correct order of the sentences. Make sure the reordered sentences form a clear and coherent narrative or description."
+    
+    ],
+    
+    "reversed_ordering_texts":[
+        "Read the image sequence from right to left. Use the images' content to guide your sentence ordering. Avoid assumptions not supported by the image seqeunce or sentences.",
+        "Understand images from right to left in the order. Focus on the visual content of the images to determine the correct order of the sentences. Make sure the reordered sentences form a clear and coherent narrative or description."
+    ]
+}
