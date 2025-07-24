@@ -77,29 +77,7 @@ def answer_question(img_path, question_text, vl_gpt, vl_chat_processor, tokenize
         
     
     
-    
-def main():
-    model_path = "deepseek-ai/deepseek-vl2-tiny"
-    vl_chat_processor: DeepseekVLV2Processor = DeepseekVLV2Processor.from_pretrained(model_path)
-    tokenizer = vl_chat_processor.tokenizer
 
-    vl_gpt: DeepseekVLV2ForCausalLM = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
-    vl_gpt = vl_gpt.to(torch.bfloat16).cuda().eval()
-    
-    question_text = "This is a description of the possible appearance of character(s) in the image(s): Fred is chubby, has black hair, a large nose and wears an orange and black spotted short-sleeved loincloth with a blue scarf. Wilma has swirly red-orange hair, wears a loincloth dress with a torn hemline and a pearl necklace. \n The statement is: Fred and wilma talked to each other in the room after Fred talked in the living room while wearing a head and arm bandage. \n Is the statement completely accurate and content with the content in the sequence of images? When making the choice, focus on the evidence presented in the sequence of images from left to right. No need to give reasoning process. Submit only the right option letter as your answer, e.g., Option [Letter]. Options: A. True; B. False. The answer is: "
-    img_path = ['/home/ysong/temporal-mllms/data/temporal_data/flintstones/video_frames_sampled_jpg/s_01_e_01_shot_013354_013428.jpg',
- '/home/ysong/temporal-mllms/data/temporal_data/flintstones/video_frames_sampled_jpg/s_01_e_01_shot_014003_014077.jpg',
- '/home/ysong/temporal-mllms/data/temporal_data/flintstones/video_frames_sampled_jpg/s_01_e_01_shot_014586_014660.jpg',
- '/home/ysong/temporal-mllms/data/temporal_data/flintstones/video_frames_sampled_jpg/s_01_e_01_shot_014784_014858.jpg',
- '/home/ysong/temporal-mllms/data/temporal_data/flintstones/video_frames_sampled_jpg/s_01_e_01_shot_015224_015298.jpg']
-    print(question_text)
-    answer = answer_question(img_path, question_text, vl_gpt, vl_chat_processor, tokenizer, use_separate=True)
-    print(answer)
-    
-    
-   
-if __name__ == "__main__":
-    main()
 
 
 
