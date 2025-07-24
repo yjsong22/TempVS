@@ -17,7 +17,8 @@ Utrecht University, The Netherlands
 - **MT2: Sentence Ordering**  
 - **MT3: Image Ordering**  
 
-Each task is paired with a **grounding test** to assess whether errors are due to lack of visual grounding or temporal reasoning.
+Each task is paired with a **Grounding Test (GT)** to assess whether errors are due to lack of visual grounding or temporal reasoning.
+
 
 ---
 
