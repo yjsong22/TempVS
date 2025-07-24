@@ -19,6 +19,8 @@ Utrecht University, The Netherlands
 
 Each task is paired with a **Grounding Test (GT)** to assess whether errors are due to lack of visual grounding or temporal reasoning.
 
+![TempVS Examples](assets/examples.png)
+
 ---
 
 ## 📦 Installation
