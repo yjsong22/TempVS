@@ -28,19 +28,17 @@ models = [
     'LongVA-7B', 'LongVA-7B-DPO',
     'Mantis-8B-Idefics2', 'Mantis-8B-siglip-llama3',
     'Phi-3-vision-128k-instruct', 'Phi-3.5-vision-instruct',
-    #'Qwen2-VL-2B', 
-    'Qwen2-VL-2B-Instruct', 
-    #'Qwen2-VL-7B', 
-    'Qwen2-VL-7B-Instruct', 
-    'Qwen2-VL-72B', 'Qwen2-VL-72B-Instruct', 
+    'Qwen2-VL-2B', 'Qwen2-VL-2B-Instruct', 
+    'Qwen2-VL-7B', 'Qwen2-VL-7B-Instruct', 
+    'Qwen2-VL-72B','Qwen2-VL-72B-Instruct', 
+    'GPT4o',
+    #'Llama-3.1-8B', 'Phi-3.5-mini-instruct', 'Qwen2.5-72B-Instruct'
     ]
 
 tasks = [ 
-       'paired_event_discrimination', 'paired_grounding_one_text', 
-                                 'triple_event_discrimination', 'triple_grounding_one_text', 
-                                 'single_grounding_all', 'single_grounding_all_story', 
-                                 'ordering_images_opt_story',  'ordering_images_opt_event',
-                                 'ordering_texts_opt_story', 'ordering_texts_opt_event'
+        "paired_event_discrimination", "triple_event_discrimination",
+        "ordering_texts_opt_event", "ordering_texts_opt_story",
+        "ordering_images_opt_event", "ordering_images_opt_story",   
          ]
 
 models_llm = ['Llama-3.1-8B', 'Phi-3.5-mini-instruct', 'Qwen2.5-72B-Instruct']
@@ -115,7 +113,7 @@ def process_predictions(model, data_source, task, pred_folder):
             suffix = 'full'
             
         
-        df = pd.read_pickle(f'data/{pred_folder}/{model}/{data_source}_{task}_preds_{suffix}.pkl')
+        df = pd.read_pickle(f'temporal_data/{pred_folder}/{model}/{data_source}_{task}_preds_{suffix}.pkl')
         event_columns = [col for col in df.columns if col.startswith('event')]
         if event_columns:
             # List of strings to check for
@@ -218,12 +216,19 @@ def process_predictions(model, data_source, task, pred_folder):
     return df
     
         
-def analyze_grounding_vs_main_task(model, data_source, main_task, pred_folder='predictions/blind'):
+def analyze_grounding_vs_main_task(model, data_source, main_task, pred_folder='predictions/combined'):
     
-    if 'story' in main_task:
+    if 'story' in main_task and 'ordering' in main_task:
         grounding_task = 'single_grounding_all_story'
-    else:
+    elif 'event' in main_task and 'ordering' in main_task:
         grounding_task = 'single_grounding_all'
+    elif 'paired_event' in main_task:
+        grounding_task = 'paried_grounding_one_text'
+    elif 'triple_event' in main_task:
+        grounding_task = 'paired_grounding_one_text'
+    else:
+        print(f'Unknown grounding task: {main_task}')
+        return None
 
     df_grounding = process_predictions(model, data_source, grounding_task, pred_folder)
     df_main = process_predictions(model, data_source, main_task, pred_folder)
@@ -401,7 +406,7 @@ def analyze_grounding_vs_main_task(model, data_source, main_task, pred_folder='p
     
     return results
     
-def analyze_task_performance(task, models_to_analyze=None, pred_folder='predictions/blind'):
+def analyze_task_performance(task, models_to_analyze=None, pred_folder='predictions/combined'):
     # Initialize base columns
     base_columns = [
         'total_cases',
@@ -513,7 +518,7 @@ def analyze_task_performance(task, models_to_analyze=None, pred_folder='predicti
 # Example usage:
 for task in tasks:
     print(f"\nProcessing task: {task}")
-    output_dir = 'data/evaluation/text_only'
+    output_dir = 'temporal_data/evaluation/new_test'
     os.makedirs(output_dir, exist_ok=True)
     
     results = analyze_task_performance(task)
@@ -521,33 +526,6 @@ for task in tasks:
     output_file = f"{output_dir}/{task}_results.csv"
     results.to_csv(output_file)
     print(f"Saved results to {output_file}")
-
-# def analyze_and_save_in_batches(task, batch_size=10, output_dir='data/evaluation/batched'):
-
-#     os.makedirs(output_dir, exist_ok=True)
-    
-#     # Calculate number of batches needed
-#     num_batches = (len(models) + batch_size - 1) // batch_size
-    
-#     for batch_idx in range(num_batches):
-        
-#         start_idx = batch_idx * batch_size
-#         end_idx = min((batch_idx + 1) * batch_size, len(models))
-#         models_batch = models[start_idx:end_idx]
-        
-#         # Analyze the batch
-#         print(f"Processing batch {batch_idx + 1}/{num_batches} ({start_idx}-{end_idx})")
-#         results = analyze_task_performance(task, models_batch)
-        
-#         # Save results to CSV
-#         output_file = f"{output_dir}/{task}_batch_{batch_idx+1:02d}.csv"
-#         results.to_csv(output_file)
-#         print(f"Saved results to {output_file}")
-
-# # Example usage:
-# for task in tasks[3:]:
-#     print(f"\nProcessing task: {task}")
-#     analyze_and_save_in_batches(task)
     
     
 
