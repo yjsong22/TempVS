@@ -52,6 +52,7 @@ Once downloaded, make sure the files are structured as follows:
 ```
 ├── data/
 │   └── benchmark/                # Annotation files (multiple-choice questions and answers)
+│   └── benchmark_pkl/            # Annotation files in pkl format (used in the code)
 │   └── flintstones/              # Image subset from FlintstonesSV
 │       └── combined/
 │       └── combined_shuffled/
