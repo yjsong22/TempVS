@@ -42,7 +42,7 @@ Our benchmark data is available at [HuggingFace](https://huggingface.co/datasets
 
 ### Step 1: Download the Data
 
-Download the dataset files (annotations and image subsets) from our [HuggingFace repository](https://huggingface.co/datasets/yingjins/TempVS). You can do this manually or using the `huggingface_hub` Python API.
+Download the dataset files (annotations, image subsets and LLM-only results for data filtering) from our [HuggingFace repository](https://huggingface.co/datasets/yingjins/TempVS). You can do this manually or using the `huggingface_hub` Python API.
 
 
 ### Step 2: Organize the Data
@@ -52,11 +52,15 @@ Once downloaded, make sure the files are structured as follows:
 ```
 ├── data/
 │   └── benchmark/                # Annotation files (multiple-choice questions and answers)
-│   └── benchmark_pkl/            # Annotation files in pkl format (used in the code)
+│   └── benchmark_pkl/            # Annotation files in pkl format (used in the code, all the same as in json format)
 │   └── flintstones/              # Image subset from FlintstonesSV
 │       └── combined/
 │       └── combined_shuffled/
 │       └── video_frames_sampled_jpg/
+│   └── predictions/              # Directory of predictions
+│       └── blind/                # Predictions of LLMs: text only, no images
+│       └── combined/             # Predictions of combined images as a sequence
+│       └── separate/             # Predictions of separate images as a sequence
 │   └── pororo/                   # Image subset from PororoSV
 │       └── combined/
 │       └── combined_shuffled/
@@ -118,6 +122,7 @@ python run_inference.py --data_source vwp --task single_grounding_all_story --mo
 
 
 ## 📊 Performance Evaluation
+
 ```bash
 python run_evaluation.py
 ```
