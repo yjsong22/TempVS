@@ -111,11 +111,11 @@ python run_inference.py --data_source vist --task ordering_images_opt_event --mo
 python run_inference.py --data_source vist --task ordering_images_opt_story --model_id llava-hf/llava-interleave-qwen-7b-hf
 ```
 
-4. **Grounding Test (GT)**: `paired_grounding_one_text` (MT1 two-event grounding), `triple_grounding_one_text` (MT1 three-event grounding), `single_grounding_all` (MT2 & MT3 event grounding), `single_grounding_all_story` (MT2 & MT3 story grounding)
+4. **Grounding Test (GT)**: `single_grounding_paired` (MT1 two-event grounding), `single_grounding_triple` (MT1 three-event grounding), `single_grounding_all` (MT2 & MT3 event grounding), `single_grounding_all_story` (MT2 & MT3 story grounding)
 
 ```bash
-python run_inference.py --data_source vwp --task paired_grounding_one_text --model_id TIGER-Lab/Mantis-8B-Idefics2
-python run_inference.py --data_source vwp --task triple_grounding_one_text --model_id TIGER-Lab/Mantis-8B-Idefics2
+python run_inference.py --data_source vwp --task single_grounding_paired --model_id TIGER-Lab/Mantis-8B-Idefics2
+python run_inference.py --data_source vwp --task single_grounding_triple --model_id TIGER-Lab/Mantis-8B-Idefics2
 python run_inference.py --data_source vwp --task single_grounding_all --model_id TIGER-Lab/Mantis-8B-Idefics2
 python run_inference.py --data_source vwp --task single_grounding_all_story --model_id TIGER-Lab/Mantis-8B-Idefics2
 ```
