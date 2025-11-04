@@ -35,10 +35,10 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Run inference')
     parser.add_argument('--data_source', type=str, default='flintstones',
                         help='Source of the data (e.g., flintstones, pororo, vist, vwp)')
-    parser.add_argument('--task', type=str, default='paired_grounding_one_text',
+    parser.add_argument('--task', type=str, default='single_grounding_paired',
                         choices=[ 
-                                 'paired_event_discrimination', 'paired_grounding_one_image', 'paired_grounding_one_text', 
-                                 'triple_event_discrimination', 'triple_grounding_one_image', 'triple_grounding_one_text', 
+                                 'paired_event_discrimination', 'single_grounding_paired',
+                                 'triple_event_discrimination', 'single_grounding_triple',
                                  'single_grounding_all', 'single_grounding_all_story', 
                                  'ordering_images_opt_story',  'ordering_images_opt_event',
                                  'ordering_texts_opt_story', 'ordering_texts_opt_event'
@@ -69,11 +69,12 @@ def process_benchmark(row, task, data_source, run_cot=False, use_separate=False)
     
     if data_source in ['vist', 'vwp']:
         char_desp = ''
-        
-    if task in ['paired_grounding_one_image', 'paired_grounding_one_text', 'paired_event_discrimination', 'triple_grounding_one_image', 'triple_grounding_one_text', 'triple_event_discrimination']:
+
+
+    if task in ['paired_event_discrimination', 'triple_event_discrimination', 'ordering_images_opt_story',  'ordering_images_opt_event', 'ordering_texts_opt_story', 'ordering_texts_opt_event']:
         option_text = '\nOptions are: '+row['option_text']
 
-    if 'single_grounding' in task:
+    if 'grounding' in task:
         if use_separate:
             img_path = row['img_path_list']
         else:
@@ -299,11 +300,11 @@ def main():
         sys.exit()
 
     if 'ordering_' in args.task:
-        df = pd.read_pickle(f'data/benchmark/{args.data_source}_{args.task[:-10]}_test.pkl')
+        df = pd.read_pickle(f'data/benchmark_pkl/{args.data_source}_{args.task[:-10]}_test.pkl')
     elif args.task == 'single_grounding_all_story':
-        df = pd.read_pickle(f'data/benchmark/{args.data_source}_{args.task[:-6]}_test.pkl')
+        df = pd.read_pickle(f'data/benchmark_pkl/{args.data_source}_{args.task[:-6]}_test.pkl')
     else:
-        df = pd.read_pickle(f'data/benchmark/{args.data_source}_{args.task}_test.pkl')
+        df = pd.read_pickle(f'data/benchmark_pkl/{args.data_source}_{args.task}_test.pkl')
         
     df['preds'] = ''
     print("Making Inference for total number of samples: ", len(df))

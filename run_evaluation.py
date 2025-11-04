@@ -223,9 +223,9 @@ def analyze_grounding_vs_main_task(model, data_source, main_task, pred_folder='p
     elif 'event' in main_task and 'ordering' in main_task:
         grounding_task = 'single_grounding_all'
     elif 'paired_event' in main_task:
-        grounding_task = 'paried_grounding_one_text'
+        grounding_task = 'single_grounding_paired'
     elif 'triple_event' in main_task:
-        grounding_task = 'triple_grounding_one_text'
+        grounding_task = 'single_grounding_triple'
     else:
         print(f'Unknown grounding task: {main_task}')
         return None
